@@ -1,0 +1,16 @@
+module.exports = app => {
+    const stn = require("../controllers/stn.controller.js");
+
+    var router = require("express").Router();
+
+    // Create a new STN
+    router.post("/", stn.save);
+
+    // Retrieve STN
+    router.get("/", stn.find);
+
+    // Delete a QSO with id
+    router.delete("/", stn.delete);
+
+    app.use('/api/stn', router);
+  };

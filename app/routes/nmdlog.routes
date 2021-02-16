@@ -1,0 +1,28 @@
+module.exports = app => {
+    const nmdlog = require("../controllers/nmdlog.controller.js");
+
+    var router = require("express").Router();
+
+    // Create a new QSO
+    router.post("/", nmdlog.create);
+
+    // Upload csv
+    router.post("/upload", nmdlog.upload);
+
+    // Retrieve all QSOs
+    router.get("/", nmdlog.findAll);
+
+    // Retrieve a single QSO with id
+    router.get("/:id", nmdlog.findOne);
+
+    // Update a QSO with id
+    router.put("/:id", nmdlog.update);
+
+    // Delete a QSO with id
+    router.delete("/:id", nmdlog.delete);
+
+    // Delete all QSOs
+    router.delete("/", nmdlog.deleteAll);
+
+    app.use('/api/nmdlog', router);
+  };
