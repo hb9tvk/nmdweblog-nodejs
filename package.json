@@ -1,0 +1,11 @@
+{
+  "name": "nmdweblog-nodejs",
+  "version": "1.0.0",
+  "description": "node.js backend for web-based NMD log",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Kohler HB9TVK",
+  "license": "ISC"
+}
